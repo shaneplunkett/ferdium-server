@@ -1,7 +1,9 @@
 version: "2"
 services:
   ferdium-server:
-    image: ferdium/ferdium-server:latest
+    build:
+      context: https://github.com/shaneplunkett/ferdium-server.git
+      dockerfile: Dockerfile
     container_name: ferdium-server
     environment:
       - NODE_ENV=production
